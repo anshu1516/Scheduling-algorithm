@@ -28,6 +28,14 @@ int main()
     show(data, p);
     printf("If you want to continue then press 'A': ");
     scanf("%s",&f);
+    if(f=='A')
+    {
+    	printf("\nYou can continue further\n");
+	}
+	else
+	{
+		printf("\nYou cannot proceed further\n");
+	}
     }
 	while(f=='A');
     return 0;
@@ -74,7 +82,6 @@ void scheduling(struct student list[100], int c)
         }
     }
 }
-
 
 void waitingTime(struct student list[100], int d)
 {
