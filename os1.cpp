@@ -28,6 +28,14 @@ int main()
     show(data, p);
     printf("If you want to continue then press 'A': ");
     scanf("%s",&f);
+    if(f=='A')
+    {
+    	printf("\nYou can continue further\n");
+	}
+	else
+	{
+		printf("\nYou cannot proceed further\n");
+	}
     }
 	while(f=='A');
     return 0;
@@ -58,3 +66,19 @@ void scheduling(struct student list[100], int c)
         {
             if (list[j].FoodTakenTime < list[j + 1].FoodTakenTime)
             {
+                temp = list[j];
+                list[j] = list[j + 1];
+                list[j + 1] = temp;
+            } 
+            else if(list[j].FoodTakenTime == list[j + 1].FoodTakenTime)
+            {
+            	if(list[j].StudentId > list[j + 1].StudentId)
+            	{
+            	temp = list[j];
+                list[j] = list[j + 1];
+                list[j + 1] = temp;
+                }
+			}
+        }
+    }
+}
