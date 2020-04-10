@@ -1,20 +1,3 @@
- temp = list[j];
-                list[j] = list[j + 1];
-                list[j + 1] = temp;
-            } 
-            else if(list[j].FoodTakenTime == list[j + 1].FoodTakenTime)
-            {
-            	if(list[j].StudentId > list[j + 1].StudentId)
-            	{
-            	temp = list[j];
-                list[j] = list[j + 1];
-                list[j + 1] = temp;
-                }
-			}
-        }
-    }
-}
-
 void waitingTime(struct student list[100], int d)
 {
 	int j;
